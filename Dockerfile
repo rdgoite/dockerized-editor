@@ -10,5 +10,8 @@ USER editor
 ADD vimrc /home/editor/.vimrc
 
 VOLUME /home/editor
+VOLUME /home/editor/workspace
+WORKDIR /home/editor/workspace
 
 ENTRYPOINT ["vim"]
+CMD ["note.txt"]
